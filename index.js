@@ -78,8 +78,14 @@ function ortalamaBul(arr) {
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(/* kodlar buraya */) {
-  // kodlar buraya
+function ortalamadanBuyukleriBul(arr, cbfunc) {
+  if (arr == "") {
+    return null;
+  } else {
+    const avg = cbfunc(arr);
+    const newArr2 = arr.filter((num) => num >= avg);
+    return newArr2;
+  }
 }
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
