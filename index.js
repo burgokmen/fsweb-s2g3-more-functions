@@ -16,9 +16,18 @@
   örnek output: ""
 */
 
-function dosyaAdiniBul(/* kodlar buraya */) {
-  // kodlar buraya
+function dosyaAdiniBul(str) {
+  if (str.includes("/")) {
+    return str.split("/").slice(-1)[0];
+  } else {
+    return str;
+  }
 }
+
+console.log(
+  "G1 T1 :",
+  dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3")
+);
 
 /*
   GÖREV 2
@@ -38,8 +47,15 @@ function dosyaAdiniBul(/* kodlar buraya */) {
   örnek output: 104
 */
 
-function ortalamaBul(/* kodlar buraya */) {
-  // kodlar buraya
+function ortalamaBul(arr) {
+  if (arr == "") {
+    return null;
+  } else {
+    const ortArr = arr.reduce((total, num) => {
+      return total + num;
+    }, 0);
+    return ortArr / arr.length;
+  }
 }
 
 /*
